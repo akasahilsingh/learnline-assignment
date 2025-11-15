@@ -2,6 +2,10 @@
 
 This is a simple e-commerce application built with React and Vite. It allows users to view a list of products, filter them by category, and add them to a shopping cart.
 
+## Live Demo
+
+You can view a live demo of the application [here](https://learnline-assignment.vercel.app/).
+
 ## Features
 
 *   View a list of products with their names, prices, and images.
