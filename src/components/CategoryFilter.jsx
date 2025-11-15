@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from "react";
 
-const CategoryFilter = ({ categories, setSelectedCategory }) => {
+import { CategoryContext } from "../Context/CategoryContext.jsx";
+
+const CategoryFilter = () => {
+  const { setSelectedCategory, categories } = useContext(CategoryContext);
+
   return (
     <div className="flex flex-wrap mb-4">
       {categories.map((category) => (
