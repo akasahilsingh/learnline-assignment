@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { CartContext } from '../Context/Cartcontext';
+import React, { useContext } from "react";
+import { CartContext } from "../Context/Cartcontext";
 
 const ShoppingCart = () => {
-  const { cart, removeFromCart } = useContext(CartContext)
+  const { cart, removeFromCart, removeAllFromCart } = useContext(CartContext);
   const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
@@ -31,6 +31,12 @@ const ShoppingCart = () => {
               </button>
             </div>
           ))}
+          <button
+            onClick={() => removeAllFromCart(cart)}
+            className="bg-red-500 text-white px-2 py-1 mt-2 rounded hover:bg-red-500"
+          >
+            Empty Cart
+          </button>
           <h3 className="text-xl font-bold mt-4">Total: ${total.toFixed(2)}</h3>
         </div>
       )}
